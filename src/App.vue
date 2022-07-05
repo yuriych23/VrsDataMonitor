@@ -20,7 +20,7 @@ export default {
   methods: {
     async getAllLogs() {
       this.logs = null
-      const res = await fetch(`https://localhost:7108/api/vrslog`)
+      const res = await fetch(`https://vrs-data.azurewebsites.net/api/vrslogentries`)
       this.logs = await res.json()
     }
   },
